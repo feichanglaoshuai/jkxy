@@ -1,0 +1,155 @@
+@import "base.scss";
+
+#openclass {
+    /*公开课*/
+    font-size: 12px;
+    padding-bottom: 15px;
+    .index-public-title strong a {
+        color: $aHoverColor;
+    }
+    .classbox {
+        position: relative;
+        height: 200px;
+    }
+    #banner-left5 {
+        left: 0;
+        background: url(http://s1.jikexueyuan.com/index/images/focus-nav_4593a01.png) 0 0 no-repeat;
+        background-size: 48px 80px;
+    }
+    #banner-left5, #banner-right5 {
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        z-index: 800;
+        display: none;
+        cursor: pointer;
+        width: 24px;
+        height: 40px;
+    }
+    #banner-right5 {
+        right: 0;
+        background: url(http://s1.jikexueyuan.com/index/images/focus-nav_4593a01.png) -24px 0 no-repeat;
+        background-size: 48px 80px;
+    }
+    .swiper-openclass {
+        width: 1020px;
+        height: 200px;
+        margin-left: -10px;
+    }
+    .swiper-wrapper::after {
+        display: table;
+        clear: both;
+        content: " ";
+    }
+    .swiper-slide {
+        float: left;
+        width: 255px;
+        height: 200px !important;
+    }
+    .details {
+        position: relative;
+        z-index: 1;
+        width: 235px;
+        height: 200px !important;
+        margin: 0 auto;
+        border: 1px solid $borderColor;
+        cursor: pointer;
+        transition: border-color .3s ease-in;
+        -moz-transition: border-color .3s ease-in;
+        -webkit-transition: border-color .3s ease-in;
+        -o-transition: border-color .3s ease-in;
+        &:hover {
+            border-color: $aHoverColor;
+            .intro {
+                opacity: 0;
+            }
+            .desc {
+                opacity: 1;
+            }
+        }
+
+        .bgimg {
+            position: absolute;
+            z-index: 1;
+            width: 233px;
+            height: 198px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .desc {
+            opacity: 0;
+            position: absolute;
+            z-index: 3;
+            width: 233px;
+            height: 198px;
+            background: rgba(255,255,255,.8);
+            padding: 20px;
+            color: #333;
+            font-size: 12px;
+            text-align: left;
+            transition: opacity .3s ease;
+            -moz-transition: opacity .3s ease;
+            -webkit-transition: opacity .3s ease;
+            -o-transition: opacity .3s ease;
+            .a-line {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            p {
+                line-height: 1.5em;
+            }
+            .multi-line {
+                height: 54px;
+                overflow: hidden;
+            }
+            .btn-green, .btn-org, .btn-gray {
+                display: block;
+                width: 150px;
+                height: 35px;
+                margin: 20px auto 0;
+                text-align: center;
+                line-height: 35px;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 3px;
+                background-color: $aHoverColor;
+            }
+        }
+        .intro {
+            opacity: 1;
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            width: 233px;
+            height: 53px;
+            background: url(http://s1.jikexueyuan.com/index/images/openclass_shadow_52b7fa2.png) no-repeat;
+            padding-top: 10px;
+            color: #fff;
+            transition: opacity .3s ease-in;
+            -moz-transition: opacity .3s ease-in;
+            -webkit-transition: opacity .3s ease-in;
+            -o-transition: opacity .3s ease-in;
+            p {
+                width: 233px;
+                padding: 0 10px;
+                height: 20px;
+                text-align: center;
+                overflow: hidden;
+                font-size: 14px;
+                .date {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

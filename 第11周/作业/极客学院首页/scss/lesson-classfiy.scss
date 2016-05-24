@@ -1,0 +1,117 @@
+@import "base.scss";
+
+.lesson-classfiy-nav {
+    /*课程左侧导航*/
+    position: relative;
+    width: 210px;
+    float: left;
+    border-top: 2px solid $aHoverColor;
+    border-right: 0;
+    height: 373px;
+    background: url(http://s1.jikexueyuan.com/index/images/nav_r_border_04083a2.jpg) 100% 0 repeat-y;
+
+    ul {
+        position: absolute;
+        z-index: 800;
+        width: 210px;
+        height: 371px;
+        background: #fff;
+        border: 1px solid $borderColor;
+        border-top: 0;
+    }
+
+    li {
+        &> div {
+            width: 208px;
+            height: 37px;
+            line-height: 37px;
+            padding: 0 15px;
+            font-size: 13px;
+            color: #333;
+            border-bottom: 1px solid #F5F5F5;
+            background: #fff url(http://s1.jikexueyuan.com/index/images/more-icon_d39346f.png) 186px center no-repeat;
+            background-size: 6px 10px;
+            cursor: pointer;
+            font-weight: 400;
+
+            &:hover{
+                .lesson-list-show {
+                    display: block;
+                }
+            }
+
+            a {
+                color: #333;
+            }
+        }
+
+        .lesson-list-show {
+            -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+            -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+            box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+            overflow: hidden;
+            min-height: 373px;
+            min-width: 401px;
+            background: #fff;
+            border: 1px solid $borderColor;
+            position: absolute;
+            left: 209px;
+            top: -2px;
+            z-index: 100;
+            border-left: 0;
+            display: none;
+            padding-bottom: 30px;
+            display: none;
+
+            & > div {
+                float: left;
+                width: 399px;
+            }
+
+            dl {
+                margin: 0 10px;
+                overflow: hidden;
+            }
+
+            dt {
+                display: block;
+                border-bottom: 1px solid #f5f5f5;
+                height: 37px;
+                line-height: 45px;
+
+                & > a {
+                    color: #333;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            dd {
+                list-style: none;
+                margin-left: -8px;
+                padding: 3px 0;
+
+                a {
+                    height: 14px;
+                    line-height: 14px;
+                    margin-bottom: 10px;
+                    margin-top: 4px;
+                    padding: 0 7px;
+                    color: #666;
+                    display: inline-block;
+                    font-size: 12px;
+                    border-left: 1px solid #e0e0e0;
+                    float: left;
+                    white-space: nowrap;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

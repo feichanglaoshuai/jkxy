@@ -1,0 +1,94 @@
+@import "base.scss";
+
+.mapbox {
+    /*知识体系图*/
+    border-bottom: 1px solid $borderColor;
+    border-right: 1px solid $borderColor;
+    width: 1000px;
+    height: 481px;
+    overflow: hidden;
+    .mapbox-1200 {
+        width: 1050px;
+    }
+}
+
+.card-transform {
+    width: 167px;
+    height: 120px;
+    border: 1px solid $borderColor;
+    border-right: 0;
+    border-bottom: 0;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .front {
+        border-bottom: 1px solid $borderColor;
+        padding: 15px 0;
+        z-index: 2;
+        @include mixTransformY(0deg);
+        background-color: #fff;
+    }
+    &:hover .front {
+        @include mixTransformY(180deg);
+    }
+    .back, .front {
+        border-bottom: 1px solid $borderColor;
+        width: 167px;
+        height: 120px;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: .6s;
+        -moz-backface-visibility: hidden;
+        -moz-transition: .6s;
+        -ms-backface-visibility: hidden;
+        -ms-transition: .6s;
+        backface-visibility: hidden;
+        transition: .6s;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &:hover .back {
+        @include mixTransformY(0deg);
+    }
+    .front{
+        img {
+            margin-bottom: 5px;
+            height: 40px;
+            width: 40px;
+        }
+        h2 {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: #333;
+        }
+        span {
+            font-size: 14px;
+            color: $aHoverColor;
+        }
+    }
+    .back {
+        padding-top: 30px;
+        @include mixTransformY(-180deg);
+        background-color: #f5f5f5;
+        strong {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+        .greenbtn {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            border-radius: inherit;
+            -webkit-border-radius: inherit;
+            -moz-border-radius: inherit;
+            width: 140px;
+            height: 36px;
+            cursor: pointer;
+        }
+    }
+
+}

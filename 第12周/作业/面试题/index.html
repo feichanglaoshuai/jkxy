@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>高级前端面试题</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+
+<div style="text-align:center;">
+	<h1>高级前端面试题总结</h1>
+</div>
+
+<div class='title'>
+    position的值， relative和absolute分别是相对于谁进行定位的？
+</div>
+<div class='content'>
+    <p><b>absolute：</b>生成绝对定位的元素， 相对于最近一级的 定位不是 static 的父元素来进行定位。</p>
+    <p><b>fixed：</b>（老IE不支持）生成绝对定位的元素，通常相对于浏览器窗口或 frame 进行定位。</p>
+    <p><b>relative：</b>生成相对定位的元素，相对于其在普通流中的位置进行定位。</p>
+    <p><b>static：</b>默认值。没有定位，元素出现在正常的流中</p>
+    <p><b>sticky：</b>生成粘性定位的元素，容器的位置根据正常文档流计算得出</p>
+    </ul>
+</div>
+
+<div class='title'>
+    说说TCP传输的三次握手四次挥手策略
+</div>
+<div class='content'>
+    <p>
+        为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送 后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK。
+    </p>
+    <p>
+        发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。 最后，发送端再回传一个带ACK标志的数据包，代表“握手”结束。 若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包。
+    </p>
+
+    <p>
+        断开一个TCP连接则需要“四次握手”：
+    </p>
+    <p>
+        <b>第一次挥手：</b>主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不 会再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可 以接受数据。
+    </p>
+    <p>
+        <b>第二次挥手：</b>被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）。
+    </p>
+    <p>
+        <b>第三次挥手：</b>被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发数据了。
+    </p>
+    <p>
+        <b>第四次挥手：</b>主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。
+    </p>
+
+</div>
+
+<div class='title'>
+    TCP和UDP的区别
+</div>
+<div class='content'>
+    <p>
+        <b>TCP</b>（Transmission Control Protocol，传输控制协议）是基于连接的协议，也就是说，在正式收发数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“对话”才能建立起来
+    </p>
+    <p>
+        <b>UDP</b>（User Data Protocol，用户数据报协议）是与TCP相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直接就把数据包发送过去！ UDP适用于一次只传送少量数据、对可靠性要求不高的应用环境。
+    </p>
+</div>
+
+<div class='title'>
+    说说你对作用域链的理解
+</div>
+<div class='content'>
+    作用域链的作用是保证执行环境里有权访问的变量和函数是有序的，作用域链的变量只能向上访问，变量访问到window对象即被终止，作用域链向下访问变量是不被允许的。
+</div>
+
+<div class='title'>
+    创建ajax过程
+</div>
+<div class='content'>
+    <p>
+        (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+    </p>
+    <p>
+        (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+    </p>
+    <p>
+        (3)设置响应HTTP请求状态变化的函数.
+    </p>
+    <p>
+        (4)发送HTTP请求.
+    </p>
+    <p>
+        (5)获取异步调用返回的数据.
+    </p>
+    <p>
+        (6)使用JavaScript和DOM实现局部刷新.
+    </p>
+</div>
+
+<div class='title'>
+    渐进增强和优雅降级
+</div>
+<div class='content'>
+    <p>
+        <b>渐进增强：</b>针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+    </p>
+    <p>
+        <b>优雅降级：</b>一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。
+    </p>
+</div>
+
+<div class='title'>
+    HTTP和HTTPS
+</div>
+<div class='content'>
+    <p>
+        HTTP协议通常承载于TCP协议之上，在HTTP和TCP之间添加一个安全协议层（SSL或TSL），这个时候，就成了我们常说的HTTPS。
+    </p>
+    <p>
+        默认HTTP的端口号为80，HTTPS的端口号为443。
+    </p>
+</div>
+
+<div class='title'>
+    对前端模块化的认识
+</div>
+<div class='content'>
+    <p>
+        AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。
+    </p>
+    <p>
+        CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。
+    </p>
+    <p>
+        AMD 是提前执行，CMD 是延迟执行。
+    </p>
+    <p>
+        AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的。
+    </p>
+</div>
+
+<div class='title'>
+    你觉得前端工程的价值体现在哪
+</div>
+<div class='content'>
+    <p>
+        为简化用户使用提供技术支持（交互部分）
+    </p>
+    <p>
+        为多个浏览器兼容性提供支持
+    </p>
+    <p>
+        为提高用户浏览速度（浏览器性能）提供支持
+    </p>
+    <p>
+        为跨平台或者其他基于webkit或其他渲染引擎的应用提供支持
+    </p>
+    <p>
+        为展示数据提供支持（数据接口）
+    </p>
+</div>
+
+<div class='title'>
+    移动端性能优化
+</div>
+<div class='content'>
+    <p>
+        尽量使用css3动画，开启硬件加速。
+    </p>
+    <p>
+        适当使用touch事件代替click事件。
+    </p>
+    <p>
+        避免使用css3渐变阴影效果。
+    </p>
+    <p>
+        可以用transform: translateZ(0)来开启硬件加速。
+    </p>
+    <p>
+        不滥用Float。Float在渲染时计算量比较大，尽量减少使用
+    </p>
+    <p>
+        不滥用Web字体。Web字体需要下载，解析，重绘当前页面，尽量减少使用。
+    </p>
+    <p>
+        合理使用requestAnimationFrame动画代替setTimeout
+    </p>
+    <p>
+        CSS中的属性（CSS3 transitions、CSS3 3D
+        transforms、Opacity、Canvas、WebGL、Video）会触发GPU渲染，请合理使用。过渡使用会引发手机过耗电增加
+    </p>
+    <p>
+        PC端的在移动端同样适用
+    </p>
+</div>
+
+<div class='title'>
+    什么是Etag？
+</div>
+<div class='content'>
+    <p>
+        当发送一个服务器请求时，浏览器首先会进行缓存过期判断。浏览器根据缓存过期时间判断缓存文件是否过期。
+    </p>
+    <p>
+        情景一：若没有过期，则不向服务器发送请求，直接使用缓存中的结果，此时我们在浏览器控制台中可以看到 200 OK(from cache) ，此时的情况就是完全使用缓存，浏览器和服务器没有任何交互的。
+    </p>
+    <p>
+        情景二：若已过期，则向服务器发送请求，此时请求中会带上①中设置的文件修改时间，和Etag
+    </p>
+    <p>
+        然后，进行资源更新判断。服务器根据浏览器传过来的文件修改时间，判断自浏览器上一次请求之后，文件是不是没有被修改过；根据Etag，判断文件内容自上一次请求之后，有没有发生变化
+    </p>
+    <p>
+        情形一：若两种判断的结论都是文件没有被修改过，则服务器就不给浏览器发index.html的内容了，直接告诉它，文件没有被修改过，你用你那边的缓存吧—— 304 Not Modified，此时浏览器就会从本地缓存中获取index.html的内容。此时的情况叫协议缓存，浏览器和服务器之间有一次请求交互。
+    </p>
+    <p>
+        情形二：若修改时间和文件内容判断有任意一个没有通过，则服务器会受理此次请求，之后的操作：只有get请求会被缓存，post请求不会。
+    </p>
+</div>
+
+<div class='title'>
+    栈和队列的区别?
+</div>
+<div class='content'>
+    <p>
+        栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。
+    </p>
+    <p>
+        队列先进先出，栈先进后出。
+    </p>
+    <p>
+        栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除。
+    </p>
+</div>
+
+<div class='title'>
+    ES6的了解
+</div>
+<div class='content'>
+    新增模板字符串（为JavaScript提供了简单的字符串插值功能）、箭头函数（操作符左边为输入的参数，而右边则是进行的操作以及返回的值Inputs=>outputs。）、for-of（用来遍历数据—例如数组中的值。）arguments对象可被不定参数和默认参数完美代替。ES6将promise对象纳入规范，提供了原生的Promise对象。增加了let和const命令，用来声明变量。增加了块级作用域。let命令实际上就增加了块级作用域。ES6规定，var命令和function命令声明的全局变量，属于全局对象的属性；let命令、const命令、class命令声明的全局变量，不属于全局对象的属性。。还有就是引入module模块的概念
+</div>
+
+<div class='title'>
+    谈谈浮动和清除浮动
+</div>
+<div class='content'>
+    浮动的框可以向左或向右移动，直到他的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流的块框表现得就像浮动框不存在一样。浮动的块框会漂浮在文档普通流的块框上。
+</div>
+
+<div class='title'>
+    说说你对闭包的理解
+</div>
+<div class='content'>
+    <p>
+        使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。在js中，函数即闭包，只有函数才会产生作用域的概念
+    </p>
+    <p>
+        闭包有三个特性：
+    </p>
+    <p>
+            1.函数嵌套函数
+    </p>
+    <p>
+            2.函数内部可以引用外部的参数和变量
+    </p>
+    <p>
+            3.参数和变量不会被垃圾回收机制回收
+    </p>
+</div>
+
+<div class='title'>
+    浏览器本地存储
+</div>
+<div class='content'>
+    <p>
+        在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage。
+    </p>
+    <p>
+        html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage。
+    </p>
+    <p>
+        sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。
+    </p>
+    <p>
+        而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
+    </p>
+</div>
+
+<div class='title'>
+    说说你对语义化的理解？
+</div>
+<div class='content'>
+    <p>
+        1.掉或者丢失样式的时候能够让页面呈现出清晰的结构
+    </p>
+    <p>
+        2.利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+    </p>
+    <p>
+        3.便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+    </p>
+    <p>
+        4.于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。
+    </p>
+</div>
+
+<div class='title'>
+    解释下浮动和它的工作原理？清除浮动的技巧
+</div>
+<div class='content'>
+    <p>
+        浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。
+    </p>
+    <p>
+        <b>1.使用空标签清除浮动。</b>
+    </p>
+    <p>
+           这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。
+    </p>
+    <p>
+        <b>2.使用overflow。</b>
+    </p>
+    <p>
+           给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。
+    </p>
+    <p>
+        <b>3.使用after伪对象清除浮动。</b>
+    </p>
+    <p>
+           该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；
+    </p>
+</div>
+
+<div class='title'>
+    如何实现浏览器内多个标签页之间的通信?
+</div>
+<div class='content'>
+    调用localstorge、cookies等本地存储方式
+</div>
+
+<div class='title'>
+    new操作符具体干了什么呢?
+</div>
+<div class='content'>
+    <p>
+        1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+    </p>
+    <p>
+        2、属性和方法被加入到 this 引用的对象中。
+    </p>
+    <p>
+        3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+    </p>
+</div>
+
+<div class='title'>
+    js延迟加载的方式有哪些？
+</div>
+<div class='content'>
+    defer和async、动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）、按需异步载入js
+</div>
+
+<div class='title'>
+    call() 和 apply() 的区别和作用？
+</div>
+<div class='content'>
+    作用：动态改变某个类的某个方法的运行环境（执行上下文）。
+</div>
+
+<div class='title'>
+    哪些操作会造成内存泄漏？
+</div>
+<div class='content'>
+    <p>
+        内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。
+    </p>
+    <p>
+        垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+    </p>
+    <p>
+        setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。
+    </p>
+    <p>
+        闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）。
+    </p>
+</div>
+
+<div class='title'>
+    列举IE 与其他浏览器不一样的特性？
+</div>
+<div class='content'>
+    <p>
+        IE支持currentStyle，FIrefox使用getComputStyle
+    </p>
+    <p>
+        IE 使用innerText，Firefox使用textContent
+    </p>
+    <p>
+        滤镜方面：IE:filter:alpha(opacity= num)；Firefox：-moz-opacity:num
+    </p>
+    <p>
+        事件方面：IE：attachEvent：火狐是addEventListener
+    </p>
+    <p>
+        鼠标位置：IE是event.clientX；火狐是event.pageX
+    </p>
+    <p>
+        IE使用event.srcElement；Firefox使用event.target
+    </p>
+    <p>
+        IE中消除list的原点仅需margin:0即可达到最终效果；FIrefox需要设置margin:0;padding:0以及list-style:none
+    </p>
+    <p>
+        CSS圆角：ie7以下不支持圆角
+    </p>
+</div>
+
+<div class='title'>
+    WEB应用从服务器主动推送Data到客户端有那些方式？
+</div>
+<div class='content'>
+    <p>
+        Commet：基于HTTP长连接的服务器推送技术
+    </p>
+    <p>
+        基于WebSocket的推送方案
+    </p>
+    <p>
+        SSE（Server-Send Event）：服务器推送数据新方式
+    </p>
+</div>
+
+<div class='title'>
+    异步加载和延迟加载
+</div>
+<div class='content'>
+    <p>
+        1.异步加载的方案： 动态插入script标签
+    </p>
+    <p>
+        2.通过ajax去获取js代码，然后通过eval执行
+    </p>
+    <p>
+        3.script标签上添加defer或者async属性
+    </p>
+    <p>
+        4.创建并插入iframe，让它异步执行js
+    </p>
+    <p>
+        5.延迟加载：有些 js 代码并不是页面初始化的时候就立刻需要的，而稍后的某些情况才需要的。
+    </p>
+</div>
+
+<div class='title'>
+    请解释一下 JavaScript 的同源策略。
+</div>
+<div class='content'>
+    <p>
+        概念:同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。
+    </p>
+    <p>
+        这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。
+    </p>
+    <p>
+        指一段脚本只能读取来自同一来源的窗口和文档的属性。
+    </p>
+</div>
+
+<div class='title'>
+    说说你对前端架构师的理解
+</div>
+<div class='content'>
+    负责前端团队的管理及与其他团队的协调工作，提升团队成员能力和整体效率； 带领团队完成研发工具及平台前端部分的设计、研发和维护； 带领团队进行前端领域前沿技术研究及新技术调研，保证团队的技术领先 负责前端开发规范制定、功能模块化设计、公共组件搭建等工作，并组织培训。
+</div>
+
+<div class='title'>
+    说说你对AMD和Commonjs的理解
+</div>
+<div class='content'>
+    <p>
+        CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数。
+    </p>
+    <p>
+        AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的。
+    </p>
+</div>
+
+<div class='title'>
+    git fetch和git pull的区别
+</div>
+<div class='content'>
+    <p>
+        git pull：相当于是从远程获取最新版本并merge到本地
+    </p>
+    <p>
+        git fetch：相当于是从远程获取最新版本到本地，不会自动merge
+    </p>
+</div>
+
+<div class='title'>
+    说说你对MVC和MVVM的理解
+</div>
+<div class='content'>
+    <p>
+        <b>MVC</b>
+    </p>
+    <p>
+        View 传送指令到 Controller
+    </p>
+    <p>
+        Controller 完成业务逻辑后，要求 Model 改变状态
+    </p>
+    <p>
+        Model 将新的数据发送到 View，用户得到反馈
+    </p>
+    <p>
+        所有通信都是单向的。
+    </p>
+    <p>
+        <b>MVVM：</b>Angular它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。
+    </p>
+    <p>
+        组成部分Model、View、ViewModel
+    </p>
+    <p>
+        View：UI界面
+    </p>
+    <p>
+        ViewModel：它是View的抽象，负责View与Model之间信息转换，将View的Command传送到Model；
+    </p>
+    <p>
+        Model：数据访问层
+    </p>
+</div>
+
+<div class='title'>
+    请解释什么是事件代理
+</div>
+<div class='content'>
+    事件代理（Event Delegation），又称之为事件委托。是 JavaScript 中常用绑定事件的常用技巧。顾名思义，“事件代理”即是把原本需要绑定的事件委托给父元素，让父元素担当事件监听的职务。事件代理的原理是DOM元素的事件冒泡。使用事件代理的好处是可以提高性能。
+</div>
+
+

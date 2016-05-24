@@ -1,0 +1,189 @@
+
+$width: 500px;
+
+.busContainer{
+    border: 2px solid black;
+    width: $width;
+    height: 258px;
+    color: white;
+    background-color: black;
+    margin: 0 auto;
+
+    .busHeader{
+        $height: 85px;
+        $leftWidth: 100px;
+        $rightWidth: ($width - $leftWidth); //运算符前后要加空格
+
+        width: $width;
+        height: $height;
+        background-color: white;
+
+        .left{
+            width: $leftWidth;
+            height: 50px;
+            background-color: orange;
+            position: absolute;
+            top: 20px;
+            a{
+                font-size: 30px;
+                /*垂直居中*/
+                line-height: 50px;
+                /*水平居中*/
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .right{
+            @mixin mxItem($vW){
+                float: left;
+                display: inline-block;
+                height: $topHeight;
+                width: $vW;
+                a{
+                    font-size: 20px;
+                    color: orange;
+                    /*垂直居中*/
+                    line-height: $topHeight;
+                    /*水平居中*/
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            $topHeight: 56px;
+            $bottomHeight: $height - $topHeight;
+
+            width: $rightWidth;
+            height: $height;
+            background-color: white;
+            float: right;
+            .top{
+                height: $topHeight;
+                $widthOne: 150px;
+                $widthTwo: 100px;
+                $widthThree: $rightWidth - $widthOne - $widthTwo;
+                .one{
+                    @include mxItem($widthOne);
+                }
+                .two{
+                    @include mxItem($widthTwo);
+                }
+                .three{
+                    @include mxItem($widthThree);
+                }
+            }
+            .bottom{
+                height: $bottomHeight;
+                a{
+                    font-size: 20px;
+                    color: red;
+                    /*垂直居中*/
+                    line-height: $bottomHeight;
+                    /*水平居中*/
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .busTime{
+        width: 100%;
+        height: 15px;
+        background-color: white;
+        a{
+            font-size: 11px;
+            color: black;
+            /*垂直居中*/
+            line-height: 15px;
+            /*水平居中*/
+            width: 180px;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .busRoadmap{
+        width: 100%;
+        height: 125px;
+        background-color: green;
+
+        .item{
+            display: block;
+            overflow: hidden;
+            width: 19px;
+            height: 120px;
+            float: left;
+            a{
+                font-size: 10px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .busDirection{
+        $height: 33px;
+        $topHeight: 25px;
+        $bottomHeight: $height - $topHeight;
+
+        width: $width;
+        height: $height;
+        background-color: white;
+        .top{
+            width: $width - 20px;
+            height: $topHeight;
+            a{
+                font-size: 11px;
+                color: black;
+                /*垂直居中*/
+                line-height: $topHeight;
+                /*水平居中*/
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+        .bottom{
+            width: 100%;
+            height: $bottomHeight;
+            margin-top: -12px;
+            .direction{
+                display: block;
+                width: 360px;
+                height: 6px;
+                background-color: green;
+                position: absolute;
+                margin-top: 11px;
+                margin-left: 50px;
+            }
+            .arrow{
+                display: block;
+                /*箭头*/
+                width: 0px;
+                height: 0px;
+                border-left: 0px solid;
+                border-top: 0px solid;
+                border-right: 60px solid;
+                border-bottom: 15px solid;
+                position: absolute;
+                margin-top: 2px;
+                margin-left: 410px;
+                /*只保留一个border有色，其他三个为透明色，剩下的就是一个三角形*/
+                border-left-color: transparent;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: green;
+            }
+        }
+    }
+}
+
+

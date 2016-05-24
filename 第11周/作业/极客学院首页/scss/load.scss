@@ -1,0 +1,72 @@
+@import "base.scss";
+
+.w-1000{
+    /*固定宽度*/
+    width:1000px;
+    margin: 0 auto;
+}
+
+.cf {
+    zoom: 1;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+.mar-t20 {
+    margin-top: 20px !important;
+}
+.mar-t30 {
+    margin-top: 30px !important;
+}
+.mar-t40 {
+    margin-top: 40px !important;
+}
+.mar-t50 {
+    margin-top: 50px !important;
+}
+.mar-b10 {
+    margin-bottom: 10px !important;
+}
+
+#small-banner{
+    /*广告条*/
+    background: rgb(209,42,42) url("../images/banner.jpg") no-repeat scroll center top;
+    width: 100%;
+    height: 80px;
+    cursor: pointer;
+}
+
+.my-massage2 {
+    /*消息按钮*/
+    background: url(http://s1.jikexueyuan.com/common/images/massage-icon2_d1369b2.gif) left center no-repeat;
+    background-size: 15px 13px;
+    box-sizing: content-box;
+    display: inline-block;
+    text-align: left;
+    padding-left: 12px;
+    position: relative;
+    width: 4px;
+    height: 50px;
+}
+
+#loading {
+    /*加载*/
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: #f3f3f3;
+
+    .loading-length {
+        width: 100%;
+        height: 2px;
+        overflow: hidden;
+        background: $aHoverColor;
+        background: -webkit-gradient(linear,10% 10%,100% 100%,color-stop(0.14,#35b550),color-stop(0.5,#8aca8c),color-stop(1,#2d85ca));
+    }
+}

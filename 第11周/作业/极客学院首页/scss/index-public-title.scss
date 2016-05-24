@@ -1,0 +1,57 @@
+@import "base.scss";
+
+.index-public-title {
+    /*课程标题*/
+    margin-bottom: 16px;
+    strong {
+        font-size: 18px;
+        color: #333;
+        float: left;
+        font-weight: 500;
+        a {
+            color: #333;
+        }
+    }
+    .way {
+        font-size: 12px;
+        line-height: 13px;
+        color: #fff;
+        background: #999;
+        text-align: center;
+        border-radius: 50%;
+        display: block;
+        width: 13px;
+        height: 13px;
+        float: left;
+        margin: 5px 8px 0;
+        cursor: pointer;
+    }
+    .way-infor {
+        font-size: 12px;
+        color: #666;
+        padding: 2px 4px;
+        border: 1px solid $borderColor;
+        position: relative;
+        display: inline-block;
+        box-shadow: 1px 1px 3px #ccc;
+        opacity: 0;
+        margin-left: -5px;
+        i {
+            background: url(http://s1.jikexueyuan.com/index/images/title-sj_adebc06.jpg) center center no-repeat;
+            width: 5px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            z-index: 10;
+        }
+    }
+}
+
+.index-public-title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}

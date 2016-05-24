@@ -1,0 +1,101 @@
+@import "base.scss";
+
+.live-sign-popup, .addreserve {
+    padding: 10px;
+    background: rgba(0,0,0,.2);
+    width: 420px;
+    display: none;
+    .hd {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        height: 40px;
+        padding: 0 30px 0 8px;
+        background: #f3f3f3;
+        line-height: 40px;
+        cursor: default;
+        position: absolute;
+    }
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 17px;
+        color: #7e7e7e;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: url(http://s1.jikexueyuan.com/index/images/close3_215a363.png) no-repeat center center / 14px 14px;
+    }
+}
+
+.live-sign-popup{
+    .pop-content {
+        padding: 62px 50px;
+        width: 400px;
+        background: #fff;
+        .b1 {
+            border: 1px solid $borderColor;
+        }
+        .title {
+            font-size: 18px;
+            text-align: center;
+        }
+        .info {
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .form {
+            margin-top: 12px;
+            input {
+                line-height: 38px;
+                height: 38px;
+                margin-left: 14px;
+                width: 270px;
+            }
+            .input-box {
+                margin-top: 10px;
+                height: 40px;
+            }
+            .type select {
+                width: 234px;
+                background: #fff;
+                line-height: 48px;
+                height: 37px;
+                outline: 0;
+            }
+            .sign-submit {
+                width: 300px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                background-color: $aHoverColor;
+                margin-top: 20px;
+                display: block;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.addreserve .pop-content {
+    width: 400px;
+    margin: 0 auto;
+    padding: 68px 40px 55px;
+    color: #333;
+    background: #fff;
+    .re-title {
+        text-align: center;
+        font-size: 19px;
+        padding-bottom: 20px;
+    }
+    .re-content p {
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+}
+

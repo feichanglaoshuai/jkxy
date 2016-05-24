@@ -1,0 +1,57 @@
+@import "base.scss";
+
+.hot-lesson{
+    /*推荐课程*/
+    ul {
+        height: 41px;
+        background: url(http://s1.jikexueyuan.com/index/images/hotnav_bc_f22b37e.jpg) 0 100% repeat-x;
+        li {
+            width: 16.6%;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            padding: 10px 0;
+            cursor: pointer;
+            .on {
+                border-bottom: 2px solid $aHoverColor;
+                background: url(http://s1.jikexueyuan.com/index/images/index-sj_cc73747.png) center bottom no-repeat;
+                background-size: 10px 4px;
+                color: $aHoverColor;
+            }
+            &:hover {
+                border-bottom: 2px solid $aHoverColor;
+                color: $aHoverColor;
+            }
+        }
+    }
+}
+
+#hot-lessonbox {
+    .lesson-list{
+        .lesson-infor {
+            border: 1px solid $borderColor;
+            border-top: 0;
+            background: #fff !important;
+            height: 88px;
+        }
+        .lessonimg-box {
+            border: 1px solid $borderColor;
+            border-bottom: 0;
+            width: 235px;
+        }
+        ul {
+            width: 1100px;
+            margin-top: 0;
+            #hot-lessonbox .lesson-list ul li {
+                margin-right: 20px;
+                background: 0 0;
+                margin-bottom: 20px;
+                height: 220px;
+                width: 235px;
+            }
+        }
+    }
+}
+
+

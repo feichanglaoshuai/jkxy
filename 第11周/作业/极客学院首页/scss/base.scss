@@ -1,0 +1,9 @@
+$borderColor: #E4E4E4;
+$aHoverColor: #35b558;
+
+@mixin mixTransformY($vDeg: 0deg){
+    -webkit-transform: rotateY($vDeg);
+    -moz-transform: rotateY($vDeg);
+    -ms-transform: rotateY($vDeg);
+    transform: rotateY($vDeg);
+}

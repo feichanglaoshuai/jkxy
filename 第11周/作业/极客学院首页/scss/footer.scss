@@ -1,0 +1,172 @@
+@import "base.scss";
+
+#footer {
+    /*页脚*/
+    min-width: 1000px;
+    .jkinfor-block {
+        background: #fafafa;
+        border-top: 1px solid $borderColor;
+        border-bottom: 1px solid $borderColor;
+        .jkinfor {
+            width: 1000px;
+            margin: 0 auto;
+            min-height: 200px;
+            dl {
+                width: 185px;
+                padding-left: 30px;
+                color: gray;
+                margin: 25px 0;
+                float: left;
+                border-left: 1px solid $borderColor;
+                min-height: 175px;
+                dt {
+                    font-size: 14px;
+                    color: #666;
+                    font-weight: 500;
+                }
+                dd {
+                    font-size: 12px;
+                }
+            }
+            a {
+                color: gray;
+                padding-left: 5px;
+                &:hover {
+                    color: $aHoverColor;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        color: #999;
+        margin: 0 auto;
+        width: 1000px;
+        text-align: center;
+        padding: 20px;
+        strong {
+            font-weight: 400;
+        }
+        a {
+            color: #999;
+            &:hover {
+                color: $aHoverColor;
+            }
+        }
+    }
+
+    .search-share {
+        width: 260px;
+        float: left;
+        min-height: 226px;
+        border-left: 1px solid $borderColor;
+        padding: 20px 0 0 40px;
+        .jktxt {
+            font-size: 15px;
+            color: $aHoverColor;
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .app-download{
+            a {
+                padding-left: 0;
+            }
+            img {
+                display: block;
+                float: left;
+                margin-right: 15px;
+            }
+            p {
+                font-size: 14px;
+                color: gray;
+                background: url(http://s1.jikexueyuan.com/common/images/more-icon_d39346f.png) 160px center no-repeat;
+                background-size: 7px 13px;
+            }
+        }
+        .share {
+            margin-top: 15px;
+            &::after {
+                display: table;
+                clear: both;
+                content: " ";
+            }
+            a {
+                background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) -23px 0 no-repeat;
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+                position: relative;
+                &.sina-icon {
+                    background-position: -23px 0;
+                    &:hover {
+                        background-position: -23px -40px;
+                    }
+                }
+                &.tieba-icon {
+                    background-position: -145px 0;
+                    &:hover {
+                        background-position: -145px -40px;
+                    }
+                }
+               &.qq-icon {
+                    background-position: -23px -82px;
+                    .weinxinpop {
+                        position: absolute;
+                        bottom: 32px;
+                        left: -48px;
+                        z-index: 200;
+                        display: none;
+                    }
+                    &:hover {
+                        background-position: -23px -122px;
+                        .weinxinpop {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .kefu-online {
+        margin-top: 15px;
+        padding-left: 35px;
+        a {
+            display: block;
+            padding: 0;
+        }
+        .kefu-icon {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin-left: -40px;
+            background: url(http://s1.jikexueyuan.com/common/images/kefu_8edc734.png) no-repeat -40px 0/80px 40px;
+            .online {
+                background-position: 0 0;
+            }
+        }
+        h5 {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 2px;
+            line-height: 22px;
+            padding-left: 5px;
+        }
+        p {
+            color: gray;
+            font-size: 12px;
+            padding-left: 5px;
+        }
+    }
+
+    .kefu-online a:hover h5, .kefu-online a:hover p {
+        color: $aHoverColor;
+    }
+    .search-share .app-download a:hover p, .search-share .app-download a:hover strong {
+        color: $aHoverColor;
+    }
+}

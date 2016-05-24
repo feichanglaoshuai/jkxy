@@ -1,0 +1,46 @@
+@import "base.scss";
+
+#header{
+    /*头部*/
+    min-height: 70px;
+    margin:0 auto;
+    padding:10px 0;
+
+    .logo{
+        float: left;
+        width:113px;
+        margin-top: 5px;
+    }
+
+    > .wrap{
+        position: relative;
+        z-index: 1200;
+
+        &:after{
+            display: table;
+            clear: both;
+            content: "";
+        }
+    }
+
+    .loginbox, .loginbox_event{
+        float: right;
+        text-align: right;
+        line-height: 50px;
+        font-size: 12px;
+        color: #333;
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        em{
+            padding: 0 5px;
+        }
+
+        .user-name, span{
+            cursor: pointer;
+            display: inline-block;
+        }
+
+    }
+}

@@ -1,0 +1,194 @@
+@import "base.scss";
+
+.strategy {
+    /*图片滚动组件*/
+    border:1px solid $borderColor;
+    height:90px;
+    padding:20px;
+    position:relative;
+}
+.strategy-box {
+    height:50px;
+    height:960px;
+    overflow:hidden;
+}
+.swiper-strategy {
+    height:50px!important;
+    .swiper-slide {
+        text-align:center;
+        img {
+            height:50px;
+            width:150px;
+            border:1px solid $borderColor;
+        }
+    }
+    .swiper-wrapper a {
+        width:159px
+    }
+}
+
+.swiper-container,.swiper-container2 {
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -o-backface-visibility:hidden;
+    backface-visibility:hidden;
+    z-index:1
+}
+.swiper-container {
+    height:305px;
+    width:100%;
+}
+.swiper-wrapper {
+    position:relative;
+    width:100%;
+    -webkit-transition-property:-webkit-transform,left,top;
+    -webkit-transition-duration:0s;
+    -webkit-transform:translate3d(0px,0,0);
+    -webkit-transition-timing-function:ease;
+    -moz-transition-property:-moz-transform,left,top;
+    -moz-transition-duration:0s;
+    -moz-transform:translate3d(0px,0,0);
+    -moz-transition-timing-function:ease;
+    -o-transition-property:-o-transform,left,top;
+    -o-transition-duration:0s;
+    -o-transition-timing-function:ease;
+    -o-transform:translate(0px,0);
+    -ms-transition-property:-ms-transform,left,top;
+    -ms-transition-duration:0s;
+    -ms-transform:translate3d(0px,0,0);
+    -ms-transition-timing-function:ease;
+    transition-property:transform,left,top;
+    transition-duration:0s;
+    transform:translate3d(0px,0,0);
+    transition-timing-function:ease;
+    a img {
+        width:110px;
+        height:110px
+    }
+}
+
+.swiper-free-mode>.swiper-wrapper {
+    -webkit-transition-timing-function:ease-out;
+    -moz-transition-timing-function:ease-out;
+    -ms-transition-timing-function:ease-out;
+    -o-transition-timing-function:ease-out;
+    transition-timing-function:ease-out;
+    margin:0 auto
+}
+
+.swiper-slide {
+    float:left
+}
+.swiper-wp8-horizontal {
+    -ms-touch-action:pan-y
+}
+.swiper-wp8-vertical {
+    -ms-touch-action:pan-x
+}
+
+.swiper-car {
+    height:110px;
+    width:100%
+}
+.pagination {
+    position:absolute;
+    left:0;
+    text-align:center;
+    bottom:7px;
+    width:100%;
+    z-index:800
+}
+.swiper-pagination-switch {
+    display:inline-block;
+    width:39px;
+    height:7px;
+    background:url(http://s1.jikexueyuan.com/index/images/swiper1_6a811bf.jpg) center center no-repeat;
+    margin:0 6px;
+    cursor:pointer
+}
+.swiper-active-switch {
+    background:url(http://s1.jikexueyuan.com/index/images/swiper2_78fab30.jpg) center center no-repeat
+}
+
+#banner-left,#banner-left2,#banner-left3 {
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-25px;
+    z-index:800;
+    display:none;
+    cursor:pointer
+}
+
+@mixin mixArrow($vImg, $vDeg){
+    background:url($vImg) -10px $vDeg no-repeat;
+    width:40px;
+    height:50px;
+    display:block;
+    overflow:hidden;
+    cursor:pointer
+}
+.arrow-left {
+    @include mixArrow('http://s1.jikexueyuan.com/index/images/banner-left_fe0df34.png',-5px);
+}
+.arrow-left2 {
+    @include mixArrow('http://s1.jikexueyuan.com/index/images/banner-left_fe0df34.png',-65px);
+}
+.arrow-right {
+    @include mixArrow('http://s1.jikexueyuan.com/index/images/banner-right_a0bdd7d.png',-5px);
+}
+.arrow-right2 {
+    @include mixArrow('http://s1.jikexueyuan.com/index/images/banner-right_a0bdd7d.png',-65px);
+}
+
+#banner-right,#banner-right2,#banner-right3 {
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-25px;
+    z-index:800;
+    display:none;
+    cursor:pointer
+}
+
+.swiper-slide {
+    position:relative;
+    text-align:center;
+    height:305px!important;
+    .swiper-box {
+        width:570px;
+        margin:0 auto;
+        height:305px;
+        padding-top:50px;
+        padding-left:50px;
+        text-align:left;
+        h2 {
+            font-size:50px;
+            font-weight:700;
+            color:#fff;
+            margin-bottom:20px
+        }
+        .banner-infor {
+            font-size:20px;
+            font-weight:400;
+            color:#eee;
+            margin-bottom:30px
+        }
+        .banner-infor2 {
+            font-size:16px;
+            font-weight:400;
+            color:#eee
+        }
+    }
+}
+
+.swiper-car-box {
+    border:1px solid $borderColor;
+    height:150px;
+    padding:20px;
+    position:relative
+}

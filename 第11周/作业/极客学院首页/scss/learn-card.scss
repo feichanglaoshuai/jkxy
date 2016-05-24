@@ -1,0 +1,68 @@
+@import "base.scss";
+
+
+
+.learn-card a {
+    /*职业路径图*/
+    width: 20%;
+    border: 1px solid $borderColor;
+    float: left;
+    text-align: center;
+    display: block;
+    height: 300px;
+    border-right: 0;
+    overflow: hidden;
+    img {
+        margin-bottom: 24px;
+    }
+    h2 {
+        font-size: 15px;
+        color: #333;
+        margin-bottom: 20px;
+        height: 18px;
+        overflow: hidden;
+    }
+    p {
+        font-size: 12px;
+        color: #666;
+        line-height: 20px;
+        height: 20px;
+        width: 199px;
+        overflow: hidden;
+    }
+    &:hover .greenbtn2 {
+        background: #35b558;
+        color: #fff;
+        outline: 0;
+    }
+    .greenbtn2, #Waiting-btn {
+        width: 140px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+        outline: 0;
+    }
+}
+
+@mixin mixGreenBtn($color, $backcolor){
+    display: inline-block;
+    color: $color;
+    font-size: 16px;
+    background: $backcolor;
+    border: 1px solid $aHoverColor;
+    -webkit-transition-duration: .8s;
+    transition-duration: .8s;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.greenbtn2 {
+    @include mixGreenBtn($aHoverColor, #f3fff6);
+}
+.greenbtn {
+    @include mixGreenBtn(#fff, $aHoverColor);
+}
