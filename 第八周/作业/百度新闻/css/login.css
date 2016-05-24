@@ -1,0 +1,61 @@
+/*清除浮动*/
+.clearfix:after{
+    content:"";
+    width: 0;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+}
+/*背景*/
+body{
+    background: url('../img/bg.jpg');
+    background-size: 100%;
+}
+/*容器位置调整*/
+.container header{
+    margin-top: 200px;
+    text-align: center;
+}
+.container header h2{
+    color: #123;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.container .warp{
+    text-align: center;
+}
+.container .wrap .login{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #666;
+    text-align: center;
+    background-color: rgba(612, 383, 538, 0.5);
+}
+.container .wrap .login .input-group{
+    margin-bottom: 20px;
+}
+.container .wrap .login .btn{
+    width: 100%;
+    color: #fff;
+    height: 40px;
+    background-color: #333;
+}
+
+/*手机屏幕适配*/
+@media (max-width: 768px){
+    html,body{
+        height: 100%;
+    }
+    body{
+        min-width: 300px;
+        background-color: #333;
+    }
+    .container header{
+        margin-top: 100px;
+    }
+    .container .wrap .login{
+        width: 100%;
+    }
+}

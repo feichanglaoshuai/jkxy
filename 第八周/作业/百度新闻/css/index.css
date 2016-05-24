@@ -1,0 +1,76 @@
+/* 全局设置 */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 12px arial;
+    background-image: none;
+    box-sizing:border-box; /*怪异盒模型*/
+}
+
+/*容器*/
+.wrapper{
+    margin: 5px 5px auto 5px;
+}
+
+/*头部*/
+.header{
+    width: 100%;
+    background-color: #3e98f0;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*内容区*/
+.content{
+    width: 100%;
+    height: 100px;
+}
+
+/*分类表格*/
+table{
+    width: 100%;
+}
+td {
+    height: 33px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*新闻*/
+.news{
+    border-bottom: 1px solid #f6f6f6;
+    display: block;
+    cursor: pointer;
+}
+.left{
+    font-size: 0;
+    height: 68px;
+    vertical-align: middle;
+    width: 95px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    margin-left: 0;
+    margin-right: 10px;
+    background-color: #F4F7F9;
+    position: relative;
+    display:inline-block;
+}
+.left img{
+    width: 100%;
+}
+.right{
+    height:40px;
+    max-height: 40px;
+    overflow: hidden;
+    display:inline-block;
+}
+.news_title{
+    font-size: 16px;
+    line-height: 20px;
+    color: #262b31;
+    margin: -1px 0 4px 0;
+}

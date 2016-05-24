@@ -1,0 +1,25 @@
+/*全局设置*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*盒子左侧紧挨着浮动*/
+.box{
+    position: relative;
+    float: left;
+}
+
+/*图片样式设置*/
+.content{
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+}
+
+/*图片等宽*/
+.content img{
+    width: 260px;
+    height: auto;
+}

@@ -1,0 +1,28 @@
+/*容器*/
+.container{
+    width: 600px !important; /*去除响应式布局*/
+    margin-top: 100px;
+}
+
+/*充满*/
+.full{
+    width: 100%;
+    height: 100%;
+}
+
+/*单元格控制*/
+.tdw{
+    width:60px;
+    height:60px;
+}
+
+.tdw2{
+    width:60px;
+    height:120px;
+}
+
+textarea{
+    text-align: right;
+    resize: none;
+    overflow: hidden;
+}
