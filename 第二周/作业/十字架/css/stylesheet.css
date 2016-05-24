@@ -1,0 +1,64 @@
+.wrapper{
+	/*居中方案一：绝对位置布局*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 300px;
+	width: 300px;
+	margin-left: -150px;
+	margin-top: -150px;
+	background-color: white;
+}
+
+.Item{
+	height: 100px;
+	width: 100px;
+	/*阴影效果*/
+	box-shadow: 0px 0px 10px #000;
+}
+
+.LeftItem{
+	position: absolute;
+	margin-top: 100px;
+	background-color: yellow;
+}
+
+.RightItem{
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 200px;
+	background-color: blue;
+}
+
+.TopItem{
+	position: absolute;
+	margin-left: 100px;
+	background-color: gray;
+}
+
+.BottomItem{
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 200px;
+	background-color: red;
+}
+
+.MiddleItem{
+	/*居中方案二：盒子中的元素居中*/
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+
+	/*绝对位置布局*/
+	position: absolute;
+	margin-left: 100px;
+	margin-top: 100px;
+
+	/*阴影效果（覆盖父类）*/
+	box-shadow: 2px 2px 5px #000;
+}
+
+.Moon{
+	width: 100px;
+	height: 100px;
+}

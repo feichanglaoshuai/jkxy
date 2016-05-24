@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>初级前端面试题</title>
+</head>
+<body>
+
+<div style="text-align:center;">
+	<h1>前端面试题总结HTML CSS部分</h1>
+</div>
+
+<p>　　<strong>1.对WEB标准以及W3C的理解与认识</strong></p>
+<p>　　标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性;</p>
+
+<p>　　<strong>2.xhtml和html有什么区别</strong></p>
+<p>　　HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言</p>
+<p>　　最主要的不同：</p>
+<p>　　XHTML 元素必须被正确地嵌套。</p>
+<p>　　XHTML 元素必须被关闭。</p>
+<p>　　标签名必须用小写字母。</p>
+<p>　　XHTML 文档必须拥有根元素。</p>
+
+<p>　　<strong>3.Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义?</strong></p>
+<p>　　用于声明文档使用那种规范(html/Xhtml)一般为 严格 过度 基于框架的html文档</p>
+<p>　　加入XMl声明可触发，解析方式更改为IE5.5 拥有IE5.5的bug</p>
+
+<p>　　<strong>4.行内元素有哪些?块级元素有哪些?CSS的盒模型?</strong></p>
+<p>　　块级元素：div p h1 h2 h3 h4 form ul</p>
+<p>　　行内元素: a b br i span input select</p>
+<p>　　Css盒模型:内容，border ,margin，padding</p>
+
+<p>　　<strong>5.CSS引入的方式有哪些? link和@import的区别是?</strong></p>
+<p>　　内联 内嵌 外链 导入</p>
+<p>　　区别 ：同时加载</p>
+<p>　　前者无兼容性，后者CSS2.1以下浏览器不支持</p>
+<p>　　Link 支持使用javascript改变样式，后者不可</p>
+
+<p>　　<strong>6.CSS选择符有哪些?哪些属性可以继承?优先级算法如何计算?内联和important哪个优先级高?</strong></p>
+<p>　　标签选择符 类选择符 id选择符</p>
+<p>　　继承不如指定 Id&gt;class&gt;标签选择</p>
+<p>　　后者优先级高</p>
+
+<p>　　<strong>7.前端页面有哪三层构成，分别是什么?作用是什么?</strong></p>
+<p>　　结构层 Html 表示层 CSS 行为层 js</p>
+
+<p>　　<strong>8.css的基本语句构成是?</strong></p>
+<p>　　选择器{属性1:值1;属性2:值2;&hellip;&hellip;}</p>
+
+<p>　　<strong>9.你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</strong></p>
+<p>　　Ie(Ie内核) 火狐(Gecko) 谷歌(webkit) opear(Presto)</p>
+
+<p>　　<strong>10.写出几种IE6 BUG的解决方法</strong></p>
+<p>　　1.双边距BUG float引起的 使用display</p>
+<p>　　2.3像素问题 使用float引起的 使用dislpay:inline -3px</p>
+<p>　　3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active</p>
+<p>　　4.Ie z-index问题 给父级添加position:relative</p>
+<p>　　5.Png 透明 使用js代码 改</p>
+<p>　　6.Min-height 最小高度 !Important 解决&rsquo;</p>
+<p>　　7.select 在ie6下遮盖 使用iframe嵌套</p>
+<p>　　8.为什么没有办法定义1px左右的宽度容器(IE6默认的行高造成的，使用over:hidden,zoom:0.08  line-height:1px)</p>
+<p>　　9.ie 6 不支持!important</p>
+
+<p>　　<strong>11.img标签上title与alt属性的区别是什么?</strong></p>
+<p>　　Alt 当图片不显示是 用文字代表。</p>
+<p>　　Title 为该属性提供信息</p>
+
+<p>　　<strong>12.描述css reset的作用和用途。</strong></p>
+<p>　　Reset重置浏览器的css默认属性 浏览器的品种不同，样式不同，然后重置，让他们统一</p>
+
+<p>　　<strong>13.解释css sprites，如何使用。</strong></p>
+<p>　　Css 精灵 把一堆小的图片整合到一张大的图片上，减轻服务器对图片的请求数量</p>
+
+<p>　　<strong>14.浏览器标准模式和怪异模式之间的区别是什么?</strong></p>
+<p>　　盒子模型 渲染模式的不同</p>
+<p>　　使用 window.top.document.compatMode 可显示为什么模式</p>
+
+<p>　　<strong>15.你如何对网站的文件和资源进行优化?期待的解决方案包括：</strong></p>
+<p>　　文件合并</p>
+<p>　　文件最小化/文件压缩</p>
+<p>　　使用CDN托管</p>
+<p>　　缓存的使用</p>
+
+<p>　　<strong>16.什么是语义化的HTML?</strong></p>
+<p>　　直观的认识标签 对于搜索引擎的抓取有好处</p>
+
+<p>　　<strong>17.清除浮动的几种方式，各自的优缺点</strong></p>
+<p>　　1.使用空标签清除浮动 clear:both(理论上能清楚任何标签，，，增加无意义的标签)</p>
+<p>　　2.使用overflow:auto(空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE)</p>
+<p>　　3.是用afert伪元素清除浮动(用于非IE浏览器)</p>
+
+<p>　　<strong>18.css hack</strong></p>
+<p>　　&lt;!--[if IE 6]--&gt;&lt;![end if]--&gt;</p>
+<p>　　_marging \\IE 6</p>
+<p>　　+margin \\IE 7</p>
+<p>　　Marging:0 auto \9 所有Ie</p>
+<p>　　Margin \0 \\IE 8</p>
+
+<p>　　<strong>19.div+css的布局较table布局有什么优点？</strong></p>
+<p>　　改版的时候更方便 只要改css文件。</p>
+<p>　　页面加载速度更快、结构化清晰、页面显示简洁。</p>
+<p>　　表现与结构相分离。</p>
+<p>　　易于优化（seo）搜索引擎更友好，排名更容易靠前。</p>
+
+<p>　　<strong>20.前端页面有哪三层构成，分别是什么？作用是什么？</strong></p>
+<p>　　结构层：由 HTML 或 XHTML 之类的标记语言负责创建，仅负责语义的表达。解决了页面“内容是什么”的问题。</p>
+<p>　　表示层：由CSS负责创建，解决了页面“如何显示内容”的问题。</p>
+<p>　　行为层：由脚本负责。解决了页面上“内容应该如何对事件作出反应”的问题。</p>
+
+<p>　　<strong>21. 如何定义高度很小的容器？</strong></p>
+<p>　　正解：在IE6下无法定义小高度的容器，是因为有一个默认的行高。</p>
+<p>　　列举2种解决方案：overflow:hidden或font-size:容器高度px</p>
+
+<p>　　<strong>22. 如何使得文字不换行？</strong></p>
+<p>　　正解：定义容器为overflow:hidden;width:xxx;white-space:nowrap;text-overflow:ellipsis;</p>
+
+<p>　　<strong>23. 如何使得英文单词不发生词内断行？</strong></p>
+<p>　　正解：word-wrap:break-word;</p>
+
+<p>　　<strong>24. 如何区别display:none与visibility:hidden?</strong></p>
+<p>　　正解：相同的是display:none与visibility:hidden都可以用来隐藏某个元素；不同的是display:none在隐藏元素的时候，将其占位空间也去掉；而visibility:hidden只是隐藏了内容而已，其占位空间仍然保留。</p>
+
+<p>　　<strong>25. 什么是响应式设计？</strong></p>
+<p>　　它是关于网站的制作或网页制作的工作。不同的设备有不同的尺寸和不同的功能。响应式设计是让所有的人能在这些设备上让网站运行正常。一部分是媒体查询和不同的视觉效果。一部分是不同的资源（如不同的Javascript来处理触摸与点击自动适应屏幕的对比）。</p>
+
+<p>　　<strong>26. SVG的好处是什么？</strong></p>
+<p>　　SVG是一种基于矢量的图像格式。这是一个有效的格式（文件小）。你可以对他们进行缩放和任何尺寸下保持清晰（提及到小尺寸下光栅占优势可以加分）。你可以使用CSS和JavaScript来修饰他们以及使用SVG指定的滤镜做很多事情，比如说模糊效果。</p>
+</body>
+</html>

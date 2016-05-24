@@ -1,0 +1,17 @@
+/*旧版盒子居中布局*/
+.wrapper{	
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	background-color: blue;
+	width: 300px;
+	height: 300px;
+}
+
+.child{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	/*美化：阴影效果*/
+	box-shadow: 0px 0px 10px #000;
+}

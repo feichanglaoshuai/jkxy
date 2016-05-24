@@ -1,0 +1,80 @@
+div{
+	color: white;
+}
+
+/*初始化*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*头*/
+.myheader{
+	background-color: red;
+	text-align: center;
+}
+
+/*脚*/
+.myfooter{
+	background-color: blue;
+	text-align: center;
+}
+
+/*正文*/
+.myarticle{
+	background-color: #848474;
+	height: 300px;
+
+	/*利用填充给左侧和右侧预留出位置，模拟中间效果*/
+	/*注意标准盒模型，填充会撑大容器*/
+	padding-left: 150px;
+	padding-right: 100px;	
+}
+
+
+/*正文中间*/
+.myarticle .mymiddle{
+	background-color: #B91E57;
+
+	/*浮动且自适应宽度，占满了屏幕宽度，后面的浮动元素被挤到下一行*/
+	float: left;
+	width: 100%;
+}
+
+/*正文左侧*/
+.myarticle .myleft{
+	background-color: #4038B7;
+	/*小高度：为了看出效果*/
+	height: 14px;
+	text-align: left;
+
+	/*浮动且固定宽度*/
+	float: left;
+	width: 150px;
+
+	/*左补白负值，模拟到上一行的最左侧*/
+	margin-left: -100%;
+
+	/*相对自己左顶点移动-150px，占据父容器的左填充空间，模拟左侧*/
+	position: relative;
+	left: -150px;
+}
+
+/*正文右侧*/
+.myarticle .myright{
+	background-color: #333333;	
+	/*小高度：为了看出效果*/
+	height: 14px;
+	text-align: right;
+
+	/*浮动且固定宽度*/
+	float: left;
+	width: 100px;	
+
+	/*左补白负值，模拟到上一行的最右侧*/
+	margin-left: -100px;
+
+	/*相对自己左顶点移动100px，占据父容器的右填充空间，模拟右侧*/
+	position: relative;
+	left: 100px;
+}

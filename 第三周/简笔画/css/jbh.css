@@ -1,0 +1,57 @@
+body {
+  min-width: 325px;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  background: #2a2a2a;
+}
+
+/*外层*/
+.wrapper {
+  margin: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  background: #1c1c1c;
+}
+
+/*摆动小球*/
+.child {
+  height: 10%;
+  width: 10%;
+  position: absolute;
+  left: 45%;
+  border-radius: 50%;
+  background: dodgerblue;
+  /*动画及兼容处理*/
+  animation: move 1s ease-in-out infinite alternate;
+  -moz-animation: move 1s ease-in-out infinite alternate;
+  -webkit-animation: move 1s ease-in-out infinite alternate;
+  -ms-animation: move 1s ease-in-out infinite alternate;
+}
+
+
+/*动画及兼容处理*/
+@-moz-keyframes move {
+  from { -moz-transform: translate(0,50%); }
+  to { -moz-transform: translate(0,850%); }
+}
+@-webkit-keyframes move {
+  from { -webkit-transform: translate(0,50%); }
+  to { -webkit-transform: translate(0,850%); }
+}
+@-ms-keyframes move {
+  from { -ms-transform: translate(0,50%); }
+  to { -ms-transform: translate(0,850%); }
+}
+@keyframes move {
+  from { transform: translate(0,50%); }
+  to { transform: translate(0,850%); }
+}
+
+
+

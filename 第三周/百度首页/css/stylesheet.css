@@ -1,0 +1,146 @@
+body{
+	font: 12px arial;
+    position: relative;
+}
+
+a{
+	margin-right: 10px;
+}
+
+body,p,form{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+    display: block;
+}
+
+header{	
+	overflow: hidden;
+}
+
+header nav{
+	margin-top: 15px;
+	width: 420px;
+	float: right;
+    /*ie兼容处理*/
+    *width:450px;
+}
+
+header nav a{
+	margin-left: 5px;	
+    color: #333;
+}
+
+header nav a:hover{
+    color: #00c;
+}
+
+input{
+	border: 0;
+	padding: 0;
+}
+
+.content{
+	text-align: center;
+}
+
+.quickdelete-wrap {
+    position: relative;
+}
+
+.s_ipt_wr:hover{
+    border-color: #4791ff;
+}
+
+
+.s_ipt_wr.bg, .s_btn_wr.bg {
+    background-image: none;
+}
+
+.s_ipt_wr.bg, .s_btn_wr.bg, #su.bg {
+    background-image: none;
+}
+
+.s_ipt_wr {
+    border: 1px solid #b6b6b6;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    height: 34px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+}
+
+.s_ipt {
+	text-align: left;
+    width: 500px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    -webkit-appearance: none;
+}
+
+footer{
+	text-align: center;
+	padding-top: 50px;
+}
+
+.s_btn_wr {
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    margin-left: -3px;
+	background-position: -120px -48px;
+	z-index: 0;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	padding-bottom: 100px;
+}
+
+.s_btn {
+	background-image: none;
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    *border-bottom: 0;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+.lh a{
+    color: #272727;
+    margin-right: 20px;
+}
+
+.cp{
+    color: #666;
+}
+
+.cp a{
+    color: #666;
+}
+

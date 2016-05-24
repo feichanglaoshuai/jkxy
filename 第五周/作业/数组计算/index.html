@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>数组计算</title>
+        <script type="text/javascript">
+            //数组初始化
+            var data=["a","x","b","d","m","a","k","m","p","j","a"];
+
+            function calculate(arr){
+                //记录不重复的字母键值
+                var arrKey=[];
+                //记录键值对应的数据
+                var arrData=[];
+                //记录键值对应的位置
+                var position;
+
+                for(var i=0;i<arr.length;i++){
+                    position = arrKey.indexOf(arr[i]);
+
+                    //没找到，新增一个键值和数据
+                    if (position===-1){
+                        //定义一个对象，记录属性
+                        arrKey[arrKey.length]=arr[i];
+                        arrData[arrData.length] = {key: arr[i],count:1,pos:i};
+                    }
+                    //找到了，记录数量和位置
+                    else{
+                        ++arrData[position].count;
+                        arrData[position].pos = arrData[position].pos+','+i;
+                    }
+
+                }
+
+                //字母重复最大值
+                var maxCount=0;
+                //最大字母
+                var maxChar="";
+                //最大字母的位置列表
+                var maxPosList="";
+
+                for (var j=0;j<arrData.length;j++){
+                    console.log(j);
+                    if (arrData[j].count>maxCount){
+                        maxCount=arrData[j].count;
+                        maxChar=arrData[j].key;
+                        maxPosList=arrData[j].pos;
+                    }
+                }
+
+                return "数组中出现次数最多的【字母】：" + maxChar + "；【个数】：" + maxCount + "；【顺序】：" + maxPosList;
+            };
+
+            alert(calculate(data));
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

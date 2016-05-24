@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- 盒子按鞋的尺寸设计，不考虑填充物，填充物会撑大盒子 -->
+	<title>标准盒模型</title>
+	<style type="text/css">
+
+		.xiezi{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			overflow: scroll;
+		}
+
+		.xiehe{
+			margin: 100px;
+			padding: 10px;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border: 5px solid blue;
+			/*box-sizing: border-box;//怪异盒模型*/
+		}
+
+		/*袋子是虚的，不属于盒模型*/
+		.daizi{
+			margin: 100px;
+			width: 130px;
+			height: 130px;
+		}
+	</style>
+</head>
+<body>
+	<div class="daizi">
+	<div class="xiehe">
+		<div class="xiezi">
+			鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子
+			鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子鞋子
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>

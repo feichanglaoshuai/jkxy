@@ -1,0 +1,57 @@
+body{
+	background-color: #1d2024;
+}
+
+.header{
+	min-height: 30px;
+	background-color: #1d2024;
+}
+
+.bigline{
+	height: 50px;
+	background-color: #1d2024;
+}
+
+.line{
+	height: 10px;
+	background-color: #1d2024;
+}
+
+.login_header{
+	width: 375px;
+	margin: 0 auto;
+}
+
+.center{
+	text-align: center;
+}
+
+.title{
+	color: #69aa46 !important;
+}
+
+.row{
+	background-color: #1d2024;
+}
+
+.middle{
+	background-color: #FFF;
+	padding: 20px 10px;
+	border: solid 5px #394557;
+
+}
+
+.bigger{
+	font-size: 19px;
+	font-weight: lighter;
+	line-height: 28px;
+	margin-bottom: 16px;
+	margin-top: 18px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #CCC;
+}
+
+.line_light{
+	height: 10px;
+	background-color: #CCC;
+}

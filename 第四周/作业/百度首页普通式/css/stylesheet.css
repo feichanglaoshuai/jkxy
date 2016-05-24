@@ -1,0 +1,108 @@
+
+
+/* 全局设置 */
+*{    
+	margin: 0;
+	padding: 0;
+	list-style: none;
+    font: 12px arial;
+    background-image: none;
+}
+
+/*头部溢出控制*/
+header{ 
+    overflow: hidden;
+    display: block; /*ie兼容性*/
+}
+/*导航区控制*/
+header nav{
+    margin-top: 15px; /*上补白*/
+    float: right; /*右浮动*/
+    display: block; /*ie兼容性*/
+
+    width: 420px;  /*宽度*/
+    *width:450px;  /*ie兼容处理*/
+}
+/*导航区标签控制*/
+header nav a{
+    margin-right: 15px; /*右补白*/
+    color: #333;
+}
+/*导航区标签热度控制*/
+header nav a:hover{
+    color: #00c;
+}
+
+
+/*内容区*/
+.content{
+    text-align: center; /*居中*/
+}
+/*表单区控制*/
+.content form {
+    min-width: 641px; /*最小宽度*/
+    margin: 22px auto 0; /*上补白，左右居中*/
+    text-align: center; /*居中*/
+    padding-bottom: 100px; /*下填充，与页脚保持距离*/
+}
+
+/*查询条件容器*/
+.wrapper_input {
+    border: 1px solid #b6b6b6;
+    border-right-width: 0; /*去掉和按钮挨着的右边框*/
+    height: 34px; /*高度*/
+    display: inline-block; /*行内块元素*/    
+    _zoom:1; /*ie下inline-block兼容性*/
+    *display:inline; /*ie下inline-block兼容性*/
+}
+/*查询条件容器热度控制*/
+.wrapper_input:hover{
+    border: 1px solid #4791ff;
+}
+/*查询条件*/
+.data_input {    
+    width: 500px; /*固定宽度*/
+    height: 22px; /*固定高度*/ 
+    margin: 6px 0 0 7px; /*外补白，模仿文字位置*/
+    border: 0; /*去掉边框*/    
+    line-height: 22px\9; /*兼容性*/
+    text-align: left; /*左对齐*/    
+    font: 16px/18px arial; /*字体*/
+}
+
+/*查询按钮容器*/
+.wrapper_button {    
+    margin-left: -3px; /*左补白，去掉和查询框间的缝隙*/
+    display: inline-block; /*行内块元素*/ 
+    _zoom:1; /*ie下inline-block兼容性*/
+    *display:inline; /*ie下inline-block兼容性*/
+}
+/*查询按钮*/
+.data_button {
+    width: 100px; /*固定宽度*/
+    height: 36px; /*固定高度*/ 
+    border: 0; /*去掉边框*/ 
+    background: #3385ff; /*背景色*/
+    color: white; /*文字颜色*/
+    font-size: 15px; /*字体*/
+    letter-spacing: 1px; /*字体*/
+}
+
+/*底部区控制*/
+footer{
+	text-align: center;
+	padding-top: 50px;
+    display: block; /*ie兼容性*/
+}
+.footer_link_have a{
+    color: #272727;
+    margin-right: 20px;
+}
+.footer_link_no a, .footer_link_no span{
+    color: #666;
+    margin-right: 5px;
+}
+
+
+
+

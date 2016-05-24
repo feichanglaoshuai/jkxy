@@ -1,0 +1,42 @@
+/*分栏*/
+.column_horiz{
+	-webkit-column-count: 4;
+	-webkit-column-rule-style: dotted;	
+}
+
+
+/*弹性盒模型水平分栏：比例1:2:3*/
+.wrapperH{
+	height: 300px;
+	background-color: green;
+	display: -webkit-flex;
+	flex-direction:row;
+}
+/*弹性盒模型垂直栏：比例1:2:3*/
+.wrapperV{
+	height: 300px;
+	background-color: black;
+	display: -webkit-flex;
+	flex-direction:column; 
+}
+.first{
+	height: 100px;
+	width: 200px;
+	background-color: blue;
+	-webkit-flex:1; /*空间占比*/
+	-webkit-order:3; /*动态排序*/
+}
+.second{
+	height: 100px;
+	width: 200px;
+	background-color: red;
+	-webkit-flex:2; /*空间占比*/
+	-webkit-order:1; /*动态排序*/
+}
+.third{
+	height: 100px;
+	width: 200px;
+	background-color: yellow;
+	-webkit-flex:3; /*空间占比*/
+	-webkit-order:2; /*动态排序*/
+}

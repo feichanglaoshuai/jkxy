@@ -1,0 +1,78 @@
+div{
+	color: white;
+}
+
+/*初始化*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*头*/
+.myheader{
+	background-color: red;
+	text-align: center;
+}
+
+/*脚*/
+.myfooter{
+	background-color: blue;
+	text-align: center;
+}
+
+/*正文*/
+.myarticle{
+	background-color: #848474;
+	height: 300px;
+
+	/*隐藏溢出*/
+	overflow: hidden;
+}
+
+/*基类：垂直充满父容器*/
+.myfillV{
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
+
+/*嵌套一个容器，模仿中间，使其与左侧、右侧没有依赖关系，更容易控制。*/
+.myinner{
+	margin-left: 150px;
+	margin-right: 100px;
+}
+
+
+/*正文中间*/
+.mymiddle{
+	background-color: #B91E57;
+
+	/*浮动且自适应宽度，占满了屏幕宽度，后面的浮动元素被挤到下一行*/
+	float: left;
+	width: 100%;
+}
+
+/*正文左侧*/
+.myleft{
+	background-color: #4038B7;
+	text-align: left;
+
+	/*浮动且固定宽度*/
+	float: left;
+	width: 150px;
+
+	/*左补白负值，模拟到上一行的最左侧*/
+	margin-left: -100%;
+}
+
+/*正文右侧*/
+.myright{
+	background-color: #333333;
+    text-align: right;
+
+	/*浮动且固定宽度*/
+	float: left;
+	width: 100px;
+
+	/*左补白负值，模拟到上一行的最右侧*/
+	margin-left: -100px;
+}

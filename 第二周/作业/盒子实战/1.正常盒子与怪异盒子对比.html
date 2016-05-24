@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<title>正常盒子与怪异盒子对比</title>
+	<style type="text/css">
+		.xiezi{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+		}
+
+		/*正常盒模型*/
+		.zc_hezi{
+			padding: 10px;
+			width: 120px;
+			height: 120px;
+			background-color: red;
+		}
+
+		/*怪异盒模型*/
+		.gy_hezi{
+			padding: 10px;
+			width: 120px;
+			height: 120px;
+			background-color: blue;
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="zc_hezi">
+		<div class="xiezi">
+			<b>正常盒子：</b>
+			<br>
+			盒子会被填充物撑大
+		</div>
+	</div>
+
+	<hr>
+	
+	<div class="gy_hezi">
+		<div class="xiezi">
+			<b>怪异盒子：</b>
+			<br>
+			盒子大小不受填充物影响
+		</div>
+	</div>
+</body>
+</html>

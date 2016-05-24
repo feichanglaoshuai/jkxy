@@ -1,0 +1,22 @@
+.outer{
+	width: 100px;
+	height: 100px;
+	border: 2px solid red;
+	background-color: blue;
+
+	-webkit-transition-property: background-color;
+	-webkit-transition-timing-function: ease-in;
+	-webkit-transition-duration: 5s;
+	-webkit-transition-delay: 1s;
+}
+
+.outer:hover{
+	width: 150px;
+	height: 150px;
+	background-color: yellow;
+}
+
+.inner{
+	width: 80px;
+	height: 100%;
+}

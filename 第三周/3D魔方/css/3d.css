@@ -1,0 +1,152 @@
+/*视图区域*/
+.view{
+	width: 180px;
+	height: 180px;
+	margin: 200px auto 0 auto;	
+}
+
+/*动画盒子*/
+/*考虑浏览器兼容性*/
+.box3d{
+	-moz-animation-name: myAnimation; /*动画效果：自定义*/
+	-moz-animation-timing-function:linear; /*动画过度类型：线性*/
+	-moz-animation-iteration-count:infinite; /*动画循环次数：无线循环*/
+	-moz-animation-duration:6s; /*动画持续时间*/
+	-moz-transform-style:preserve-3d; /*开启3D变换*/
+	-moz-transform-origin:80px 80px 0; /*调整变换原点*/
+
+	-webkit-animation-name: myAnimation; /*动画效果：自定义*/
+	-webkit-animation-timing-function:linear; /*动画过度类型：线性*/
+	-webkit-animation-iteration-count:infinite; /*动画循环次数：无线循环*/
+	-webkit-animation-duration:6s; /*动画持续时间*/
+	-webkit-transform-style:preserve-3d; /*开启3D变换*/
+	-webkit-transform-origin:80px 80px 0; /*调整变换原点*/
+
+	-ms-animation-name: myAnimation; /*动画效果：自定义*/
+	-ms-animation-timing-function:linear; /*动画过度类型：线性*/
+	-ms-animation-iteration-count:infinite; /*动画循环次数：无线循环*/
+	-ms-animation-duration:6s; /*动画持续时间*/
+	-ms-transform-style:preserve-3d; /*开启3D变换*/
+	-ms-transform-origin:80px 80px 0; /*调整变换原点*/
+
+	animation-name: myAnimation; /*动画效果：自定义*/
+	animation-timing-function:linear; /*动画过度类型：线性*/
+	animation-iteration-count:infinite; /*动画循环次数：无线循环*/
+	animation-duration:6s; /*动画持续时间*/
+	transform-style:preserve-3d; /*开启3D变换*/
+	transform-origin:80px 80px 0; /*调整变换原点*/
+	
+}
+
+/*自定义动画效果*/
+@-moz-keyframes myAnimation { 
+	from { -moz-transform: rotateX(0deg) rotateY(0deg);} 
+	to { -moz-transform: rotateX(360deg) rotateY(360deg); } 
+	} 
+@-webkit-keyframes myAnimation { 
+	from { -webkit-transform: rotateX(0deg) rotateY(0deg);} 
+	to { -webkit-transform: rotateX(360deg) rotateY(360deg); } 
+	} 
+@-ms-keyframes myAnimation { 
+	from { -ms-transform: rotateX(0deg) rotateY(0deg);} 
+	to { -ms-transform: rotateX(360deg) rotateY(360deg); } 
+	} 
+@keyframes myAnimation { 
+	from { transform: rotateX(0deg) rotateY(0deg);} 
+	to { transform: rotateX(360deg) rotateY(360deg); } 
+	} 
+
+/*立方体由6个面构成*/
+/*儿子选择器（不含孙子）*/
+.box3d > div{	
+	position: absolute;
+	height: 180px;
+	width: 180px;
+	border: 1px solid #000;
+	background: rgba(255,200,100,0.8);
+	text-align: center;
+	font-size: 130px;
+}
+
+/*每个面由6个小正方形构成*/
+.one > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: blue;
+}
+.two > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: yellow;
+}
+.three > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: red;
+}
+.four > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: brown;
+}
+.five > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: orange;
+}
+.six > div{	
+	float: left;	
+	width: 56px;
+	height: 56px;
+	border: 2px solid white;
+	background-color: coral;
+}
+
+
+/*调整6个面的位置*/
+.one{
+	-moz-transform: translateZ(90px);
+	-webkit-transform: translateZ(90px);
+	-ms-transform: translateZ(90px);
+	transform: translateZ(90px);
+}
+.two{
+	-moz-transform: rotateX(-90deg) translateZ(90px);
+	-webkit-transform: rotateX(-90deg) translateZ(90px);
+	-ms-transform: rotateX(-90deg) translateZ(90px);
+	transform: rotateX(-90deg) translateZ(90px);
+}
+.three{
+	-moz-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+	-ms-transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+	transform: rotateY(90deg) rotateX(90deg) translateZ(90px);
+}
+.four{
+	-moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(90px);	
+	-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(90px);
+	-ms-transform: rotateY(180deg) rotateZ(90deg) translateZ(90px);
+	transform: rotateY(180deg) rotateZ(90deg) translateZ(90px);
+}
+.five{
+	-moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(90px);
+	-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(90px);
+	-ms-transform: rotateY(-90deg) rotateZ(90deg) translateZ(90px);
+	transform: rotateY(-90deg) rotateZ(90deg) translateZ(90px);
+}
+.six{
+	-moz-transform: rotateY(90deg) rotateZ(90deg) translateZ(90px);
+	-webkit-transform: rotateY(90deg) rotateZ(90deg) translateZ(90px);
+	-ms-transform: rotateY(90deg) rotateZ(90deg) translateZ(90px);
+	transform: rotateY(90deg) rotateZ(90deg) translateZ(90px);
+}

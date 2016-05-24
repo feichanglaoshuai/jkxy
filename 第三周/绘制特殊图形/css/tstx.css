@@ -1,0 +1,63 @@
+
+/*DIV原状*/
+.origin{
+	/*背景色透明*/
+	background-color: transparent;
+
+	/*四个边*/
+	border-left: 50px solid;
+	border-left-color: red;
+	border-top: 50px solid;
+	border-top-color: yellow;
+	border-right: 50px solid;
+	border-right-color: blue;
+	border-bottom: 50px solid;
+	border-bottom-color: gray;
+}
+
+/*有内容区域*/
+.haveContent{
+	width: 100px;
+	height: 100px;
+}
+
+/*无内容区域*/
+.deleteContent{
+	width: 0;
+	height: 0;
+}
+
+/*三角形*/
+.triangle{
+	/*只保留一个border有色，其他三个为透明色，剩下的就是一个三角形*/
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+/*直角三角形*/
+.rightTriangle{
+	/*三角形由两个border组成，去除一个border，就是直角三角形了*/
+	border-bottom: 0;
+}
+
+/*圆*/
+.circle{
+	border: 0;
+	background-color: blue;
+
+	/*方法一*/
+	border-radius: 50%;
+
+	/*方法二*/
+	/*	border-top-left-radius: 150px;
+	border-top-right-radius: 150px;
+	border-bottom-left-radius: 150px;
+	border-bottom-right-radius: 150px;*/
+}
+
+/*椭圆*/
+.ellipse{
+	height: 100px;
+	width: 200px;
+}
