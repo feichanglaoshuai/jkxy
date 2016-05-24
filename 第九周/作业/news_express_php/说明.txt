@@ -1,0 +1,6 @@
+1、前台
+express：监听3011端口
+mysql+ejs
+
+2、后台
+php

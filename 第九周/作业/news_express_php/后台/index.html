@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+
+        <!-- 移动设备 -->
+        <meta content="width=device-width,initial-scale=1.0,user-scalable=0,maximum-scale=1.0" name="viewport"/>
+        <!-- iOS-控制苹果工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- iOS-控制苹果状态栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="balck">
+        <!-- iOS-禁止把数字转化为拨号链接 -->
+        <meta name="format-detection" content="telphone=no">
+
+        <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h2>
+                百度新闻后台管理
+                </h2>
+            </header>
+            <div class="wrap form-group">
+                <form action="./data/login.php" method="get" class="login">
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input name="username" type="email" class="form-control" placeholder="电子邮箱" value="admin@163.com" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="icon-wrench"></i>
+                        </span>
+                        <input name="password" type="password" class="form-control" placeholder="密码" value="admin" required>
+                    </div>
+                    <button type="submit" class="btn">登录</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

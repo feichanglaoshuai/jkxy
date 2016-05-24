@@ -1,0 +1,27 @@
+/*logo处理*/
+.wrapper header img{
+    width: 33px;
+    height: 33px;
+}
+/*导航绝对定位*/
+@media (min-width:768px){
+    /*侧边栏*/
+    .side-nav li{
+        width: 200px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .side-nav{
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 200px;
+        border: 1px solid #e7e7e7;
+        border-radius: 0;
+        padding-bottom: 40px;
+        background-color: #f8f8f8;
+    }
+    /*主题部分*/
+    .wrapper .main{
+        margin-left: 200px;
+    }
+}
